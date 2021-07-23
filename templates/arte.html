@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block principal %}
+
+    <h1 class="TitBlanc">Arte y cultura</h1>
+
+    {% if form %}
+        <h2>Agregar</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            
+            {{form.as_p}}
+
+            <button>Guardar</button>
+
+        </form>
+    {% else %}
+    <div class="div">
+        <h2>Lista de Actividades</h2>
+        <a href="arte/add">Nueva actividad</a>
+        {% for a in actividadesarte %}
+        <ul>
+            <li>
+                <em>{{a.nombre}}</em>
+            </li>
+            <li>
+                <p>
+                    {{a.descripcion}}
+                </p>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <p>
+        <body class="imgback" background = "{% static 'img/arte.jpg' %}" >
+    </p>
+    {% endif %}
+
+{% endblock %}

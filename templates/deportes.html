@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block principal %}
+
+    <h1>Deportes</h1>
+
+    {% if form %}
+        <h2>Agregar</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            
+            {{form.as_p}}
+        
+            <button>Guardar</button>
+        </form>
+    {% else %}
+    <div>
+        <h2>Lista de Deportes</h2>
+        <a href="deportes/add">Nuevo Deporte</a>
+        {% for a in deportes %}
+        <ul>
+            <li>
+                <em>{{a.nombre}}</em>
+            </li>
+            <li>
+                <p>
+                    {{a.descripcion}}
+                </p>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <p>
+        <body class="imgback" background = "{% static 'img/deportes.jpg' %}" >
+    </p>
+{% endif %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,71 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+img{
+    width: 100%;
+}
+
+/* .imgback{
+    background-repeat: no-repeat;
+} */
+
+a:hover{
+    color:white;
+}
+
+a{
+    color: rgb(204, 166, 70);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div{
+    background: rgba(112, 112, 69, 0.548);
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 15px;
+    width: 450px;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 22px;
+}
+
+/* rgba(0, 139, 139, 0.877) */
+nav{
+    background-color: #781515;
+    height: 30px;
+}
+
+li{
+    list-style: none;
+    margin: 5px 15px 5px 0;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.TitBlanc{
+    color: rgba(255, 255, 255, 0.849);
+}
+
+/*
+    #actividadArte:hover{
+    color: darkorange;
+} */
+
+.div{
+    background: rgba(245, 222, 179, 0.753);
+}
+
+.inicio{
+    color: seashell;
+}

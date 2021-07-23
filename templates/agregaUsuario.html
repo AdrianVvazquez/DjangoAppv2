@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block principal %}
+
+<h1>Registro</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button>Ingresar</button>
+</form>
+
+{% endblock %}

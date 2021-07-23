@@ -1,0 +1,1 @@
+web: gunicorn ArteyCultura.wsgi --log-file -

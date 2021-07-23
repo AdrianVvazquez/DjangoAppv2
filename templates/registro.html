@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block principal %}
+
+    <h1>Registro</h1>
+
+    {% if form %}
+        <h2>Agregar Registro</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+        
+            {{form.as_p}}
+        
+            <button>Enviar</button>
+        </form>
+    {% else %}
+    <div>
+        <h2>Registros en el sistema</h2>
+        <a href="nuevo" id="Registro">Nuevo Registro</a>
+        {% for a in registros %}
+        <ul>
+            <li>
+                <em>{{a.nombre}}</em>
+            </li>
+            <li>
+                <p>
+                    {{a.apellidos}}
+                </p>
+            </li>
+            <li>
+                <p>
+                    {{a.sexo}}
+                </p>
+            </li>
+            <li>
+                <p>
+                    {{a.correo}}
+                </p>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <p>
+        <body class="imgback" background = "{% static 'img/tecolote.jpg' %}" >
+    </p>
+    {% endif %}
+
+
+
+{% endblock %}
