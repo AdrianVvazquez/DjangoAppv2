@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'ArteyCultura.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'arteycultura',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1p42lus2hv96b',
+        'USER': 'hpvzflxitfkodl',
+        'PASSWORD': '39eba826e8e0ce73f85b0950df6fd65c30e2dc5aad20cde400a6ce9258d868e6',
+        'HOST': 'ec2-18-235-4-83.compute-1.amazonaws.com',
     }
 }
 
@@ -115,7 +115,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
