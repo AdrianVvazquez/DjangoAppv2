@@ -130,10 +130,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
+STATIC_ROOT = os.path.join(BASE_DIR,'static', 'static')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 EMAIL_HOST = "smtp.googlemail.com"
 EMAIL_PORT = "587"
 EMAIL_HOST_USER = "vazquezgarciaadrian@gmail.com"
 EMAIL_HOST_PASSWORD = "fsgdnjayfpetcini"
 EMAIL_USE_TLS = True
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
