@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ArteyCultura.urls'
@@ -83,7 +84,6 @@ DATABASES = {
         'HOST': 'ec2-18-235-4-83.compute-1.amazonaws.com',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -135,3 +135,5 @@ EMAIL_PORT = "587"
 EMAIL_HOST_USER = "vazquezgarciaadrian@gmail.com"
 EMAIL_HOST_PASSWORD = "fsgdnjayfpetcini"
 EMAIL_USE_TLS = True
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
